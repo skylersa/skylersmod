@@ -15,9 +15,9 @@ public class SuperAwesomeThing extends Block {
 
 	public SuperAwesomeThing(Material material) {
 		super(material);
-		this.setBlockName("skylers_block");
+		this.setBlockName("Super Awesome Thing");
 		this.setHardness(10F);
-		this.setBlockTextureName(SkylersMod.modid + ":" + "SkylersBlock");
+		this.setBlockTextureName(SkylersMod.modid + ":" + "SuperAwesomeThing.png");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
@@ -28,6 +28,6 @@ public class SuperAwesomeThing extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "SuperAwesomeThing");
+				+ "super_awesome_thing");
 	}
 }

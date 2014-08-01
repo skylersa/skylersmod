@@ -13,6 +13,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.skyler.skylersmod.blocks.BlackIce;
 import com.skyler.skylersmod.blocks.SkylersBlock;
 import com.skyler.skylersmod.blocks.SkylersOre;
+import com.skyler.skylersmod.blocks.SuperAwesomeThing;
 import com.skyler.skylersmod.blocks.ZagaraniteOre;
 import com.skyler.skylersmod.items.RubyBlade;
 import com.skyler.skylersmod.items.SkylersArmor;
@@ -29,6 +30,7 @@ import com.skyler.skylersmod.items.SkylersSword;
 import com.skyler.skylersmod.items.SwordHandle;
 import com.skyler.skylersmod.items.WithersEndPick;
 import com.skyler.skylersmod.items.ZagaraniteIngot;
+import com.skyler.skylersmod.items.crazyspade;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -43,7 +45,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = SkylersMod.modid, name = SkylersMod.name, version = SkylersMod.version)
 public class SkylersMod {
 	public static final String modid = "skylersmod";
-	public static final String name = "Skyler's Mod";
+	public static final String name = "Awesome Ruby Mod by dduckie";
 	public static final String version = "0.0.1";
 
 	public static final ToolMaterial RUBY =
@@ -82,8 +84,8 @@ public class SkylersMod {
 	public static final Item withersEndPick = new WithersEndPick(RUBY2);
 	public static final Block zagaraniteOre = new ZagaraniteOre(Material.ground);
 	public static final Item zagaraniteIngot = new ZagaraniteIngot();
-
-
+	public static final Block superAwesomeThing = new SuperAwesomeThing(Material.ground);
+	public static final Item crazySpade = new crazyspade(RUBY2);
 
 
 
@@ -189,7 +191,7 @@ public class SkylersMod {
 
 			GameRegistry.registerBlock(zagaraniteOre, "zagaraniteore");
 
-
+			GameRegistry.registerBlock(superAwesomeThing, "Super Awesome Thing");
 
 
 		}
@@ -212,13 +214,13 @@ public class SkylersMod {
 
 			GameRegistry.registerItem(rubyBlade, "rubyblade");
 
-//			GameRegistry.registerItem(skylersHelmet, "skylershelmet");
-//
-//			GameRegistry.registerItem(skylersChestplate, "skylerchestplate");
-//
-//			GameRegistry.registerItem(skylersLeggings, "skylersleggings");
-//
-//			GameRegistry.registerItem(skylersBoots, "skylersboots");
+			GameRegistry.registerItem(skylersHelmet, "skylershelmet");
+
+			GameRegistry.registerItem(skylersChestplate, "skylerchestplate");
+
+			GameRegistry.registerItem(skylersLeggings, "skylersleggings");
+
+			GameRegistry.registerItem(skylersBoots, "skylersboots");
 
 			GameRegistry.registerItem(withersEndPick, "withersendpick");
 
@@ -228,6 +230,11 @@ public class SkylersMod {
 			GameRegistry.registerItem(rubyBoots, "Ruby Boots");
 
 			GameRegistry.registerItem(zagaraniteIngot, "Zagaranite Ingot");
+			
+			GameRegistry.registerItem(crazySpade, "CrazySpade");
+			
+			
+
 
 
 
