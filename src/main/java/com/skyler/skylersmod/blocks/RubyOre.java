@@ -19,7 +19,6 @@ public class RubyOre extends Block {
 		this.setHardness(5F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "ruby_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-
 	}
 
 	@SideOnly(Side.CLIENT)

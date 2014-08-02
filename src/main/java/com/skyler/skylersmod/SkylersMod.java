@@ -81,18 +81,18 @@ public class SkylersMod {
 	public static final Block rubyBlock = new RubyBlock(Material.ground);
 	public static final Item customSwordHandle = new CustomSwordHandle();
 	public static final Item rubyBlade = new RubyBlade();
-//	public static final Item rubyHelmet = new RubyHelmet(ArmorMaterial.DIAMOND,
-//			3, 0);
-//	public static final Item rubyChestPlate = new RubyChestPlate(
-//			ArmorMaterial.DIAMOND, 3, 1);
-//	public static final Item rubyLeggings = new RubyLeggings(
-//			ArmorMaterial.DIAMOND, 3, 2);
-//	public static final Item rubyBoots = new RubyBoots(ArmorMaterial.DIAMOND,
-//			3, 3);
+	// public static final Item rubyHelmet = new
+	// RubyHelmet(ArmorMaterial.DIAMOND,
+	// 3, 0);
+	// public static final Item rubyChestPlate = new RubyChestPlate(
+	// ArmorMaterial.DIAMOND, 3, 1);
+	// public static final Item rubyLeggings = new RubyLeggings(
+	// ArmorMaterial.DIAMOND, 3, 2);
+	// public static final Item rubyBoots = new RubyBoots(ArmorMaterial.DIAMOND,
+	// 3, 3);
 	public static final Item customWithersEndPick = new CustomWithersEndPick(
 			RUBY2);
-	public static final Block crazyBlock = new CrazyBlock(
-			Material.ground);
+	public static final Block crazyBlock = new CrazyBlock(Material.ground);
 	public static final Item crazySpade = new CrazySpade(RUBY2);
 	public static final Item crazySword = new CrazySword(RUBY2);
 	public static final Block crazyOre = new CrazyOre(Material.ground);
@@ -100,12 +100,12 @@ public class SkylersMod {
 
 	@Instance(value = "SkylersMod")
 	public static SkylersMod instance;
+
 	@SidedProxy(clientSide = "com.skyler.client.SkylersClientProxy", serverSide = "com.skyler.skylersmod.SkylersCommonProxy")
 	public static SkylersCommonProxy proxy;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-
 		RenderingRegistry.addNewArmourRendererPrefix("5");
 		MyBlocks();
 		MyRecipes();
@@ -115,7 +115,6 @@ public class SkylersMod {
 	@EventHandler
 	public void Init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new SkylersOreGenerator(), 1);
-
 		proxy.registerRenderers();
 	}
 
@@ -146,8 +145,8 @@ public class SkylersMod {
 				"AAA", "AAA", 'A', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(rubyHelmetArmor), new Object[] {
 				"AAA", "A A", 'A', rubyIngot });
-		GameRegistry.addRecipe(new ItemStack(rubyChestPlateArmor), new Object[] {
-				"A A", "AAA", "AAA", 'A', rubyIngot });
+		GameRegistry.addRecipe(new ItemStack(rubyChestPlateArmor),
+				new Object[] { "A A", "AAA", "AAA", 'A', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(rubyLeggingsArmor), new Object[] {
 				"AAA", "A A", "A A", 'A', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(rubyBootsArmor), new Object[] {
@@ -170,18 +169,18 @@ public class SkylersMod {
 		GameRegistry.registerBlock(crazyOre, "Crazy Ore");
 
 		GameRegistry.registerBlock(customBlackIce, "Custom Black Ice");
-		
+
 		GameRegistry.registerBlock(rubyBlock, "Ruby Block");
 		GameRegistry.registerBlock(rubyOre, "Ruby Ore");
 	}
 
 	public void MyItems() {
-		// Crazy Items
+		// Crazy items
 		GameRegistry.registerItem(crazyPick, "Crazy Pick");
 		GameRegistry.registerItem(crazySpade, "Crazy Spade");
 		GameRegistry.registerItem(crazySword, "Crazy Sword");
 
-		// Crazy Armor
+		// Crazy armor
 		GameRegistry.registerItem(crazyBootsArmor, "Crazy Boots");
 		GameRegistry.registerItem(crazyChestPlateArmor, "Crazy Chest");
 		GameRegistry.registerItem(crazyHelmetArmor, "Crazy Helmet");
@@ -189,7 +188,8 @@ public class SkylersMod {
 
 		// Miscellaneous custom stuff
 		GameRegistry.registerItem(customSwordHandle, "Custom Sword Handle");
-		GameRegistry.registerItem(customWithersEndPick, "Custom Wither's End Pick");
+		GameRegistry.registerItem(customWithersEndPick,
+				"Custom Wither's End Pick");
 
 		// Ruby items
 		GameRegistry.registerItem(rubyAxe, "Ruby Axe");
@@ -197,19 +197,20 @@ public class SkylersMod {
 		GameRegistry.registerItem(rubyHoe, "Ruby Hoe");
 		GameRegistry.registerItem(rubyIngot, "Ruby Ingot");
 		GameRegistry.registerItem(rubyPick, "Ruby Pick");
-		GameRegistry.registerItem(rubySpade, "Ruby Spade");		
+		GameRegistry.registerItem(rubySpade, "Ruby Spade");
 		GameRegistry.registerItem(rubySword, "Ruby Sword");
 
-		// Ruby Armor
+		// Ruby armor
 		GameRegistry.registerItem(rubyBootsArmor, "Ruby Boots ARMOR");
-		GameRegistry.registerItem(rubyChestPlateArmor, "Ruby Chest Plate ARMOR");
+		GameRegistry
+				.registerItem(rubyChestPlateArmor, "Ruby Chest Plate ARMOR");
 		GameRegistry.registerItem(rubyHelmetArmor, "Ruby Helmet ARMOR");
 		GameRegistry.registerItem(rubyLeggingsArmor, "Ruby Legs ARMOR");
 
-//		GameRegistry.registerItem(rubyBoots, "Ruby Boots ITEM");
-//		GameRegistry.registerItem(rubyChestPlate, "Ruby Chest Plate ITEM");
-//		GameRegistry.registerItem(rubyHelmet, "Ruby Helmet ITEM");
-//		GameRegistry.registerItem(rubyLeggings, "Ruby Leggings ITEM");
+		// GameRegistry.registerItem(rubyBoots, "Ruby Boots ITEM");
+		// GameRegistry.registerItem(rubyChestPlate, "Ruby Chest Plate ITEM");
+		// GameRegistry.registerItem(rubyHelmet, "Ruby Helmet ITEM");
+		// GameRegistry.registerItem(rubyLeggings, "Ruby Leggings ITEM");
 	}
 
 }

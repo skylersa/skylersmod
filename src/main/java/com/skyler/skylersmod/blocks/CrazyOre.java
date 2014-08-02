@@ -19,7 +19,6 @@ public class CrazyOre extends Block {
 		this.setHardness(5F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "crazy_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-
 	}
 
 	@SideOnly(Side.CLIENT)

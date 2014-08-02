@@ -19,7 +19,6 @@ public class CrazyBlock extends Block {
 		this.setHardness(10F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "crazy_block");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-
 	}
 
 	@SideOnly(Side.CLIENT)

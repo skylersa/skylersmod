@@ -19,7 +19,6 @@ public class RubyBlock extends Block {
 		this.setHardness(10F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "ruby_block");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-
 	}
 
 	@SideOnly(Side.CLIENT)
