@@ -2,7 +2,7 @@ package com.skyler.skylersmod.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.util.IIcon;
 
 import com.skyler.skylersmod.SkylersMod;
@@ -10,11 +10,13 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagaraniteIngot extends Item {
-	public ZagaraniteIngot() {
-		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setTextureName(SkylersMod.modid + ":" + "zagaranite_ingot");
-		this.setUnlocalizedName("Zagaranite Ingot");
+public class RubyLeggings extends ItemArmor {
+
+	public RubyLeggings(ArmorMaterial material, int diamond, int leggings) {
+		super(material, diamond, leggings);
+		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setTextureName(SkylersMod.modid + ":" + "ruby_leggings");
+		this.setUnlocalizedName("ruby_leggings");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -23,7 +25,6 @@ public class ZagaraniteIngot extends Item {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "zagaranite_ore");
+				+ "ruby_leggings");
 	}
-
 }

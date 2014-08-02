@@ -10,13 +10,13 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WithersEndPick extends ItemPickaxe {
+public class RubyPick extends ItemPickaxe {
 
-	public WithersEndPick(ToolMaterial material) {
+	public RubyPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(SkylersMod.modid + ":" + "withersendpick");
-		this.setUnlocalizedName("Withers End Pickaxe");
+		this.setTextureName(SkylersMod.modid + ":" + "ruby_pick");
+		this.setUnlocalizedName("ruby_pick");
 		this.setMaxStackSize(1);
 	}
 
@@ -26,6 +26,6 @@ public class WithersEndPick extends ItemPickaxe {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "withersendpick");
+				+ "ruby_pick");
 	}
 }

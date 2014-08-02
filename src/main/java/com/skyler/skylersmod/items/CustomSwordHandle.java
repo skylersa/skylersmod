@@ -10,11 +10,12 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SkylersIngot extends Item {
-	public SkylersIngot() {
-		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setTextureName(SkylersMod.modid + ":" + "skylersIngot");
-		this.setUnlocalizedName("Skyler's Ingot");
+public class CustomSwordHandle extends Item {
+
+	public CustomSwordHandle() {
+		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setTextureName(SkylersMod.modid + ":" + "custom_sword_handle");
+		this.setUnlocalizedName("custom_sword_handle");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -23,7 +24,6 @@ public class SkylersIngot extends Item {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "skylers_ingot");
+				+ "custom_sword_handle");
 	}
-
 }

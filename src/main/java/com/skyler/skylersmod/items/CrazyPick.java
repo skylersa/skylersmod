@@ -15,8 +15,8 @@ public class CrazyPick extends ItemPickaxe {
 	public CrazyPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(SkylersMod.modid + ":" + "crazypick");
-		this.setUnlocalizedName("Crazy Pick");
+		this.setTextureName(SkylersMod.modid + ":" + "crazy_pick");
+		this.setUnlocalizedName("crazy_pick");
 		this.setMaxStackSize(1);
 	}
 
@@ -26,6 +26,6 @@ public class CrazyPick extends ItemPickaxe {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "crazypick");
+				+ "crazy_pick");
 	}
 }

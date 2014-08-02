@@ -11,13 +11,13 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SuperAwesomeThing extends Block {
+public class RubyOre extends Block {
 
-	public SuperAwesomeThing(Material material) {
+	public RubyOre(Material material) {
 		super(material);
-		this.setBlockName("Super Awesome Thing");
-		this.setHardness(10F);
-		this.setBlockTextureName(SkylersMod.modid + ":" + "SuperAwesomeThing");
+		this.setBlockName("ruby_ore");
+		this.setHardness(5F);
+		this.setBlockTextureName(SkylersMod.modid + ":" + "ruby_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
@@ -27,8 +27,8 @@ public class SuperAwesomeThing extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
-
 		this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "super_awesome_thing");
+				+ "ruby_ore");
 	}
+
 }

@@ -1,18 +1,41 @@
-item.Skylers Sword.name=Ruby Sword
-tile.skylers_ore.name=Ruby Ore
-item.Skylers Pick.name=Ruby Pick Axe
-item.Skylers Axe.name=Ruby Axe
-item.Skylers Spade.name=Ruby Spade
-item.Skylers Hoe.name=Ruby Hoe
-item.Skyler's Ingot.name=Ruby Ingot
-item.Skylers Helmet.name=Ruby Helmet
-item.Skylers Chestplate.name=Ruby Chest Plate
-item.Skylers Leggings.name=Ruby Leggings
-item.Skylers Boots.name=Ruby Boots
-item.Sword Handle.name= Ruby Sword Handle
-item.Ruby Blade.name=Ruby Blade
-tile.skylers_block.name=Ruby Block
-item.Ruby Chest.name=Ruby Chest Plate
-item.Ruby Helm.name=Ruby Helmet
-item.Ruby Boots.name=Ruby Boots
-item.Ruby Legs.name=Ruby Leggings
+# ##########################################################
+# Crazy stuff
+# ##########################################################
+
+# crazy items
+item.crazy_pick.name=Crazy Pick
+item.crazy_spade.name=Crazy Spade
+item.crazy_sword.name=Crazy Sword 
+
+
+# ##########################################################
+# Miscellaneous custom stuff
+# ##########################################################
+
+# crazy items
+item.custom_sword_handle.name=Custom 
+item.custom_withers_end_pick.name=Custom
+
+
+# ##########################################################
+# Ruby stuff
+# ##########################################################
+
+# Ruby blocks
+tile.ruby_ore.name=Ruby Ore
+tile.ruby_block.name=Ruby Block
+
+# Ruby items
+item.ruby_axe.name=Ruby Axe
+item.ruby_blade.name=Ruby Blade
+item.ruby_hoe.name=Ruby Hoe
+item.ruby_ingot.name=Ruby Ingot
+item.ruby_pick.name=Ruby Pick
+item.ruby_spade.name=Ruby Spade
+item.ruby_sword.name=Ruby Sword
+
+# Ruby armor
+item.ruby_boots_armor.name=Ruby Boots
+item.ruby_chest_plate_armor.name=Ruby Chest Plate
+item.ruby_helmet_armor.name=Ruby Helmet
+item.ruby_leggings_armor.name=Ruby Leggings

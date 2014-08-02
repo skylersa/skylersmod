@@ -17,7 +17,7 @@ public class CrazyOre extends Block {
 		super(material);
 		this.setBlockName("crazy_ore");
 		this.setHardness(5F);
-		this.setBlockTextureName(SkylersMod.modid + ":" + "CrazyOre");
+		this.setBlockTextureName(SkylersMod.modid + ":" + "crazy_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
@@ -28,7 +28,7 @@ public class CrazyOre extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "CrazyOre");
+				+ "crazy_ore");
 	}
 
 }

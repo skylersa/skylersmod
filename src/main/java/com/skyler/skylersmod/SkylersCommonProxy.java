@@ -1,6 +1,6 @@
 package com.skyler.skylersmod;
 
-public class CommonProxy {
+public class SkylersCommonProxy {
 
 	public void registerRenderers() {
 

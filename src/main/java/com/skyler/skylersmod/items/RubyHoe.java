@@ -2,7 +2,7 @@ package com.skyler.skylersmod.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.util.IIcon;
 
 import com.skyler.skylersmod.SkylersMod;
@@ -10,13 +10,13 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SkylersAxe extends ItemSword {
+public class RubyHoe extends ItemHoe {
 
-	public SkylersAxe(ToolMaterial material) {
+	public RubyHoe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(SkylersMod.modid + ":" + "skylersaxe");
-		this.setUnlocalizedName("Skylers Axe");
+		this.setTextureName(SkylersMod.modid + ":" + "ruby_hoe");
+		this.setUnlocalizedName("ruby_hoe");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -25,6 +25,6 @@ public class SkylersAxe extends ItemSword {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "skylersaxe");
+				+ "ruby_hoe");
 	}
 }

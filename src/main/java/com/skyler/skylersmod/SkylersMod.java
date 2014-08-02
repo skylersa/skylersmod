@@ -10,30 +10,25 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.skyler.skylersmod.blocks.BlackIce;
+import com.skyler.skylersmod.blocks.CrazyBlock;
 import com.skyler.skylersmod.blocks.CrazyOre;
-import com.skyler.skylersmod.blocks.SkylersBlock;
-import com.skyler.skylersmod.blocks.SkylersOre;
-import com.skyler.skylersmod.blocks.SuperAwesomeThing;
-import com.skyler.skylersmod.blocks.ZagaraniteOre;
+import com.skyler.skylersmod.blocks.CustomBlackIce;
+import com.skyler.skylersmod.blocks.RubyBlock;
+import com.skyler.skylersmod.blocks.RubyOre;
+import com.skyler.skylersmod.items.CrazyArmor;
 import com.skyler.skylersmod.items.CrazyPick;
-import com.skyler.skylersmod.items.Crazysword;
+import com.skyler.skylersmod.items.CrazySpade;
+import com.skyler.skylersmod.items.CrazySword;
+import com.skyler.skylersmod.items.CustomSwordHandle;
+import com.skyler.skylersmod.items.CustomWithersEndPick;
+import com.skyler.skylersmod.items.RubyArmor;
+import com.skyler.skylersmod.items.RubyAxe;
 import com.skyler.skylersmod.items.RubyBlade;
-import com.skyler.skylersmod.items.SkylersArmor;
-import com.skyler.skylersmod.items.SkylersAxe;
-import com.skyler.skylersmod.items.SkylersBoots;
-import com.skyler.skylersmod.items.SkylersChestplate;
-import com.skyler.skylersmod.items.SkylersHelmet;
-import com.skyler.skylersmod.items.SkylersHoe;
-import com.skyler.skylersmod.items.SkylersIngot;
-import com.skyler.skylersmod.items.SkylersLeggings;
-import com.skyler.skylersmod.items.SkylersPick;
-import com.skyler.skylersmod.items.SkylersSpade;
-import com.skyler.skylersmod.items.SkylersSword;
-import com.skyler.skylersmod.items.SwordHandle;
-import com.skyler.skylersmod.items.WithersEndPick;
-import com.skyler.skylersmod.items.ZagaraniteIngot;
-import com.skyler.skylersmod.items.crazyspade;
+import com.skyler.skylersmod.items.RubyHoe;
+import com.skyler.skylersmod.items.RubyIngot;
+import com.skyler.skylersmod.items.RubyPick;
+import com.skyler.skylersmod.items.RubySpade;
+import com.skyler.skylersmod.items.RubySword;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -48,7 +43,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = SkylersMod.modid, name = SkylersMod.name, version = SkylersMod.version)
 public class SkylersMod {
 	public static final String modid = "skylersmod";
-	public static final String name = "Awesome Ruby Mod by dduckie";
+	public static final String name = "Awesome Mod by dduckie";
 	public static final String version = "0.0.1";
 
 	public static final ToolMaterial RUBY = EnumHelper.addToolMaterial("RUBY",
@@ -58,64 +53,55 @@ public class SkylersMod {
 	public static final ArmorMaterial RUBY3 = EnumHelper.addArmorMaterial(
 			"RUBY3", 50, new int[] { 4, 10, 8, 6 }, 40);
 
-	public static final Item rubyHelm = new SkylersArmor(RUBY3, 5, 0)
-			.setUnlocalizedName("Ruby Helm");
-	public static final Item rubyChest = new SkylersArmor(RUBY3, 5, 1)
-			.setUnlocalizedName("Ruby Chest");
-	public static final Item rubyLegs = new SkylersArmor(RUBY3, 5, 2)
-			.setUnlocalizedName("Ruby Legs");
-	public static final Item rubyBoots = new SkylersArmor(RUBY3, 3, 3)
-			.setUnlocalizedName("Ruby Boots");
+	public static final Item rubyHelmetArmor = new RubyArmor(RUBY3, 5, 0)
+			.setUnlocalizedName("ruby_helmet_armor");
+	public static final Item rubyChestPlateArmor = new RubyArmor(RUBY3, 5, 1)
+			.setUnlocalizedName("ruby_chest_plate_armor");
+	public static final Item rubyLeggingsArmor = new RubyArmor(RUBY3, 5, 2)
+			.setUnlocalizedName("ruby_leggings_armor");
+	public static final Item rubyBootsArmor = new RubyArmor(RUBY3, 3, 3)
+			.setUnlocalizedName("ruby_boots_armor");
 
-	public static final Item crazyHelm = new SkylersArmor(RUBY3, 5, 0)
-			.setUnlocalizedName("crazy Helm");
-	public static final Item crazyChest = new SkylersArmor(RUBY3, 5, 1)
-			.setUnlocalizedName("crazy Chest");
-	public static final Item crazyLegs = new SkylersArmor(RUBY3, 5, 2)
-			.setUnlocalizedName("crazy Legs");
-	public static final Item crazyBoots = new SkylersArmor(RUBY3, 5, 3)
-			.setUnlocalizedName("crazy Boots");
+	public static final Item crazyHelmetArmor = new CrazyArmor(RUBY3, 5, 0)
+			.setUnlocalizedName("crazy_helmet_armor");
+	public static final Item crazyChestPlateArmor = new CrazyArmor(RUBY3, 5, 1)
+			.setUnlocalizedName("crazy_chest_plate_armor");
+	public static final Item crazyLeggingsArmor = new CrazyArmor(RUBY3, 5, 2)
+			.setUnlocalizedName("crazy_leggings_armor");
+	public static final Item crazyBootsArmor = new CrazyArmor(RUBY3, 5, 3)
+			.setUnlocalizedName("crazy_boots_armor");
 
-	public static final Block skylersOre = new SkylersOre(Material.ground);
-	public static final Item skylersIngot = new SkylersIngot();
-	public static final Item skylersPick = new SkylersPick(RUBY);
-	public static final Item skylersSword = new SkylersSword(RUBY);
-	public static final Item skylersAxe = new SkylersAxe(RUBY);
-	public static final Item skylersSpade = new SkylersSpade(RUBY);
-	public static final Item skylersHoe = new SkylersHoe(RUBY);
-	public static final Block skylersBlock = new SkylersBlock(Material.ground);
-	public static final Item swordHandle = new SwordHandle();
+	public static final Block rubyOre = new RubyOre(Material.ground);
+	public static final Item rubyIngot = new RubyIngot();
+	public static final Item rubyPick = new RubyPick(RUBY);
+	public static final Item rubySword = new RubySword(RUBY);
+	public static final Item rubyAxe = new RubyAxe(RUBY);
+	public static final Item rubySpade = new RubySpade(RUBY);
+	public static final Item rubyHoe = new RubyHoe(RUBY);
+	public static final Block rubyBlock = new RubyBlock(Material.ground);
+	public static final Item customSwordHandle = new CustomSwordHandle();
 	public static final Item rubyBlade = new RubyBlade();
-	public static final Item skylersHelmet = new SkylersHelmet(
-			ArmorMaterial.DIAMOND, 3, 0);
-	public static final Item skylersChestplate = new SkylersChestplate(
-			ArmorMaterial.DIAMOND, 3, 1);
-	public static final Item skylersLeggings = new SkylersLeggings(
-			ArmorMaterial.DIAMOND, 3, 2);
-	public static final Item skylersBoots = new SkylersBoots(
-			ArmorMaterial.DIAMOND, 3, 3);
-	public static final Item withersEndPick = new WithersEndPick(RUBY2);
-	public static final Block zagaraniteOre = new ZagaraniteOre(Material.ground);
-	public static final Item zagaraniteIngot = new ZagaraniteIngot();
-	public static final Block superAwesomeThing = new SuperAwesomeThing(
+//	public static final Item rubyHelmet = new RubyHelmet(ArmorMaterial.DIAMOND,
+//			3, 0);
+//	public static final Item rubyChestPlate = new RubyChestPlate(
+//			ArmorMaterial.DIAMOND, 3, 1);
+//	public static final Item rubyLeggings = new RubyLeggings(
+//			ArmorMaterial.DIAMOND, 3, 2);
+//	public static final Item rubyBoots = new RubyBoots(ArmorMaterial.DIAMOND,
+//			3, 3);
+	public static final Item customWithersEndPick = new CustomWithersEndPick(
+			RUBY2);
+	public static final Block crazyBlock = new CrazyBlock(
 			Material.ground);
-	public static final Item crazySpade = new crazyspade(RUBY2);
-	public static final Item crazySword = new Crazysword(RUBY2);
-	public static final Block crazyore = new CrazyOre(Material.ground);
+	public static final Item crazySpade = new CrazySpade(RUBY2);
+	public static final Item crazySword = new CrazySword(RUBY2);
+	public static final Block crazyOre = new CrazyOre(Material.ground);
 	public static final Item crazyPick = new CrazyPick(RUBY2);
-	// public static final Item crazyHelmet = new
-	// SkylersHelmet(ArmorMaterial.DIAMOND, 3, 0);
-	// public static final Item crazyChestplate = new
-	// SkylersChestplate(ArmorMaterial.DIAMOND, 3, 1);
-	// public static final Item crazyLeggings = new
-	// SkylersLeggings(ArmorMaterial.DIAMOND, 3, 2);
-	// public static final Item crazyBoots = new
-	// SkylersBoots(ArmorMaterial.DIAMOND, 3, 3);
 
 	@Instance(value = "SkylersMod")
 	public static SkylersMod instance;
-	@SidedProxy(clientSide = "com.skyler.client.ClientProxy", serverSide = "com.skyler.skylersmod.CommonProxy")
-	public static CommonProxy proxy;
+	@SidedProxy(clientSide = "com.skyler.client.SkylersClientProxy", serverSide = "com.skyler.skylersmod.SkylersCommonProxy")
+	public static SkylersCommonProxy proxy;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -128,123 +114,102 @@ public class SkylersMod {
 
 	@EventHandler
 	public void Init(FMLInitializationEvent event) {
-		GameRegistry.registerWorldGenerator(new MyOreGenerator(), 1);
+		GameRegistry.registerWorldGenerator(new SkylersOreGenerator(), 1);
 
 		proxy.registerRenderers();
-
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-
 	}
 
 	public void MyRecipes() {
 		// GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond),
 		// new Object[] {Blocks.brick_stairs, Blocks.vine});
-		GameRegistry.addRecipe(new ItemStack(skylersAxe), new Object[] { "AA ",
-				"BA ", "B  ", 'A', skylersIngot, 'B', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(skylersPick), new Object[] {
-				"AAA", " B ", " B ", 'A', skylersIngot, 'B', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(skylersSpade), new Object[] {
-				" A ", " B ", " B ", 'A', skylersIngot, 'B', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(skylersHoe), new Object[] { "AA ",
-				" B ", " B ", 'A', skylersIngot, 'B', Items.stick });
-		GameRegistry.addRecipe(new ItemStack(swordHandle), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(rubyAxe), new Object[] { "AA ",
+				"BA ", "B  ", 'A', rubyIngot, 'B', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(rubyPick), new Object[] { "AAA",
+				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(rubySpade), new Object[] { " A ",
+				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(rubyHoe), new Object[] { "AA ",
+				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(customSwordHandle), new Object[] {
 				"A  ", " B ", "A A", 'A', Items.stick, 'B',
 				(new ItemStack(Items.skull, 1, 1)) });
 		GameRegistry.addRecipe(new ItemStack(rubyBlade), new Object[] { " A ",
-				"CAC", " B ", 'A', skylersIngot, 'B', skylersBlock, 'C',
+				"CAC", " B ", 'A', rubyIngot, 'B', rubyBlock, 'C',
 				Items.diamond });
-		GameRegistry.addRecipe(new ItemStack(skylersSword), new Object[] {
-				" A ", " B ", 'A', rubyBlade, 'B', swordHandle });
-		GameRegistry.addRecipe(new ItemStack(skylersBlock), new Object[] {
-				"AAA", "AAA", "AAA", 'A', skylersIngot });
-		GameRegistry.addRecipe(new ItemStack(rubyHelm), new Object[] { "AAA",
-				"A A", 'A', skylersIngot });
-		GameRegistry.addRecipe(new ItemStack(rubyChest), new Object[] { "A A",
-				"AAA", "AAA", 'A', skylersIngot });
-		GameRegistry.addRecipe(new ItemStack(rubyLegs), new Object[] { "AAA",
-				"A A", "A A", 'A', skylersIngot });
-		GameRegistry.addRecipe(new ItemStack(rubyBoots), new Object[] { "A A",
-				"A A", 'A', skylersIngot });
+		GameRegistry.addRecipe(new ItemStack(rubySword), new Object[] { " A ",
+				" B ", 'A', rubyBlade, 'B', customSwordHandle });
+		GameRegistry.addRecipe(new ItemStack(rubyBlock), new Object[] { "AAA",
+				"AAA", "AAA", 'A', rubyIngot });
+		GameRegistry.addRecipe(new ItemStack(rubyHelmetArmor), new Object[] {
+				"AAA", "A A", 'A', rubyIngot });
+		GameRegistry.addRecipe(new ItemStack(rubyChestPlateArmor), new Object[] {
+				"A A", "AAA", "AAA", 'A', rubyIngot });
+		GameRegistry.addRecipe(new ItemStack(rubyLeggingsArmor), new Object[] {
+				"AAA", "A A", "A A", 'A', rubyIngot });
+		GameRegistry.addRecipe(new ItemStack(rubyBootsArmor), new Object[] {
+				"A A", "A A", 'A', rubyIngot });
 
 		GameRegistry.addSmelting(Items.beef, new ItemStack(Items.spawn_egg, 1,
 				40), 1F);
 
-		GameRegistry
-				.addSmelting(skylersOre, new ItemStack(skylersIngot), 1000F);
-		GameRegistry.addSmelting(zagaraniteOre, new ItemStack(zagaraniteIngot),
-				1000F);
+		GameRegistry.addSmelting(rubyOre, new ItemStack(rubyIngot), 1000F);
 
 		ItemStack Fishis = new ItemStack(Items.stick);
-
 		Fishis.addEnchantment(Enchantment.knockback, 100);
 
 		GameRegistry.addShapelessRecipe(Fishis, new Object[] { Items.stick });
-
 	}
 
 	public void MyBlocks() {
-		Block blackIce = new BlackIce(Material.ground);
-		GameRegistry.registerBlock(blackIce, "Black Ice");
+		Block customBlackIce = new CustomBlackIce(Material.ground);
+		GameRegistry.registerBlock(crazyBlock, "Crazy Block");
+		GameRegistry.registerBlock(crazyOre, "Crazy Ore");
 
-		GameRegistry.registerBlock(skylersOre, "skylersore");
-
-		GameRegistry.registerBlock(skylersBlock, "skylersBlock");
-
-		GameRegistry.registerBlock(zagaraniteOre, "zagaraniteore");
-
-		GameRegistry.registerBlock(superAwesomeThing, "Super Awesome Thing");
-
-		GameRegistry.registerBlock(crazyore, "Crazy Ore");
-
+		GameRegistry.registerBlock(customBlackIce, "Custom Black Ice");
+		
+		GameRegistry.registerBlock(rubyBlock, "Ruby Block");
+		GameRegistry.registerBlock(rubyOre, "Ruby Ore");
 	}
 
 	public void MyItems() {
+		// Crazy Items
+		GameRegistry.registerItem(crazyPick, "Crazy Pick");
+		GameRegistry.registerItem(crazySpade, "Crazy Spade");
+		GameRegistry.registerItem(crazySword, "Crazy Sword");
 
-		GameRegistry.registerItem(skylersIngot, "skylersingot");
+		// Crazy Armor
+		GameRegistry.registerItem(crazyBootsArmor, "Crazy Boots");
+		GameRegistry.registerItem(crazyChestPlateArmor, "Crazy Chest");
+		GameRegistry.registerItem(crazyHelmetArmor, "Crazy Helmet");
+		GameRegistry.registerItem(crazyLeggingsArmor, "Crazy Legs");
 
-		GameRegistry.registerItem(skylersPick, "skylerspick");
+		// Miscellaneous custom stuff
+		GameRegistry.registerItem(customSwordHandle, "Custom Sword Handle");
+		GameRegistry.registerItem(customWithersEndPick, "Custom Wither's End Pick");
 
-		GameRegistry.registerItem(skylersSword, "skylerssword");
+		// Ruby items
+		GameRegistry.registerItem(rubyAxe, "Ruby Axe");
+		GameRegistry.registerItem(rubyBlade, "Ruby Blade");
+		GameRegistry.registerItem(rubyHoe, "Ruby Hoe");
+		GameRegistry.registerItem(rubyIngot, "Ruby Ingot");
+		GameRegistry.registerItem(rubyPick, "Ruby Pick");
+		GameRegistry.registerItem(rubySpade, "Ruby Spade");		
+		GameRegistry.registerItem(rubySword, "Ruby Sword");
 
-		GameRegistry.registerItem(skylersAxe, "skylersaxe");
+		// Ruby Armor
+		GameRegistry.registerItem(rubyBootsArmor, "Ruby Boots ARMOR");
+		GameRegistry.registerItem(rubyChestPlateArmor, "Ruby Chest Plate ARMOR");
+		GameRegistry.registerItem(rubyHelmetArmor, "Ruby Helmet ARMOR");
+		GameRegistry.registerItem(rubyLeggingsArmor, "Ruby Legs ARMOR");
 
-		GameRegistry.registerItem(skylersSpade, "skylersspade");
-
-		GameRegistry.registerItem(skylersHoe, "skylershoe");
-
-		GameRegistry.registerItem(swordHandle, "swordhandle");
-
-		GameRegistry.registerItem(rubyBlade, "rubyblade");
-
-		GameRegistry.registerItem(skylersHelmet, "skylershelmet");
-
-		GameRegistry.registerItem(skylersChestplate, "skylerchestplate");
-
-		GameRegistry.registerItem(skylersLeggings, "skylersleggings");
-
-		GameRegistry.registerItem(skylersBoots, "skylersboots");
-
-		GameRegistry.registerItem(withersEndPick, "withersendpick");
-
-		GameRegistry.registerItem(rubyHelm, "Ruby Helmet");
-		GameRegistry.registerItem(rubyChest, "Ruby Chest");
-		GameRegistry.registerItem(rubyLegs, "Ruby Legs");
-		GameRegistry.registerItem(rubyBoots, "Ruby Boots");
-
-		GameRegistry.registerItem(zagaraniteIngot, "Zagaranite Ingot");
-
-		GameRegistry.registerItem(crazySpade, "CrazySpade");
-		GameRegistry.registerItem(crazySword, "CrazySword");
-		GameRegistry.registerItem(crazyPick, "CrazyPick");
-
-		GameRegistry.registerItem(crazyHelm, "Crazy Helmet");
-		GameRegistry.registerItem(crazyChest, "Crazy Chest");
-		GameRegistry.registerItem(crazyLegs, "Crazy Legs");
-		GameRegistry.registerItem(crazyBoots, "Crazy Boots");
-
+//		GameRegistry.registerItem(rubyBoots, "Ruby Boots ITEM");
+//		GameRegistry.registerItem(rubyChestPlate, "Ruby Chest Plate ITEM");
+//		GameRegistry.registerItem(rubyHelmet, "Ruby Helmet ITEM");
+//		GameRegistry.registerItem(rubyLeggings, "Ruby Leggings ITEM");
 	}
 
 }
