@@ -2,10 +2,20 @@
 # Crazy stuff
 # ##########################################################
 
-# crazy items
+# Crazy blocks
+tile.crazy_ore.name=Crazy Ore
+tile.crazy_block.name=Crazy Block
+
+# Crazy items
 item.crazy_pick.name=Crazy Pick
 item.crazy_spade.name=Crazy Spade
 item.crazy_sword.name=Crazy Sword 
+
+# Crazy armor
+item.crazy_boots_armor.name=Crazy Boots
+item.crazy_chest_plate_armor.name=Crazy Chest Plate
+item.crazy_helmet_armor.name=Crazy Helmet
+item.crazy_leggings_armor.name=Crazy Leggings
 
 
 # ##########################################################

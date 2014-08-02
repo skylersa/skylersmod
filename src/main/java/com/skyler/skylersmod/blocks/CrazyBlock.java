@@ -15,7 +15,7 @@ public class CrazyBlock extends Block {
 
 	public CrazyBlock(Material material) {
 		super(material);
-		this.setBlockName("Crazy Block");
+		this.setBlockName("crazy_block");
 		this.setHardness(10F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "crazy_block");
 		this.setCreativeTab(CreativeTabs.tabBlock);
