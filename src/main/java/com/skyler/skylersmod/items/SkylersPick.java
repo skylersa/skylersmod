@@ -10,24 +10,22 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SkylersPick extends ItemPickaxe
-{
+public class SkylersPick extends ItemPickaxe {
 
-	public SkylersPick (ToolMaterial material){
+	public SkylersPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(SkylersMod.modid + ":"+"skylerspick");
+		this.setTextureName(SkylersMod.modid + ":" + "skylerspick");
 		this.setUnlocalizedName("Skylers Pick");
 		this.setMaxStackSize(1);
 	}
 
-
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid +
-				':'+"skylerspick");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
+				+ "skylerspick");
 	}
 }

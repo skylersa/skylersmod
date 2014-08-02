@@ -10,22 +10,21 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SkylersAxe extends ItemSword{
+public class SkylersAxe extends ItemSword {
 
-	public SkylersAxe (ToolMaterial material){
+	public SkylersAxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(SkylersMod.modid + ":"+"skylersaxe");
+		this.setTextureName(SkylersMod.modid + ":" + "skylersaxe");
 		this.setUnlocalizedName("Skylers Axe");
 	}
 
-
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid +
-				':'+"skylersaxe");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
+				+ "skylersaxe");
 	}
 }

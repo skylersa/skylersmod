@@ -11,13 +11,13 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SkylersBlock extends Block {
+public class CrazyOre extends Block {
 
-	public SkylersBlock(Material material) {
+	public CrazyOre(Material material) {
 		super(material);
-		this.setBlockName("skylers_block");
-		this.setHardness(10F);
-		this.setBlockTextureName(SkylersMod.modid + ":" + "SkylersBlock");
+		this.setBlockName("crazy_ore");
+		this.setHardness(5F);
+		this.setBlockTextureName(SkylersMod.modid + ":" + "CrazyOre");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
@@ -28,6 +28,7 @@ public class SkylersBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
-				+ "skylers_block");
+				+ "CrazyOre");
 	}
+
 }

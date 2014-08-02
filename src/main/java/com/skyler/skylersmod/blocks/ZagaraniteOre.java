@@ -11,9 +11,9 @@ import com.skyler.skylersmod.SkylersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagaraniteOre extends Block{
-	
-	public ZagaraniteOre(Material material){
+public class ZagaraniteOre extends Block {
+
+	public ZagaraniteOre(Material material) {
 		super(material);
 		this.setBlockName("zagaranite_ore");
 		this.setLightLevel(255F);
@@ -21,16 +21,16 @@ public class ZagaraniteOre extends Block{
 		this.setHardness(5F);
 		this.setBlockTextureName(SkylersMod.modid + ":" + "zagaranite_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-	
+
 	}
-		
-		@SideOnly(Side.CLIENT)
-		private IIcon[] icons;
-		@SideOnly(Side.CLIENT)
-		public void registerIcons(IIconRegister par1IconRegister)
-		{
-			this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + 
-					':'+"zagarnite_ore");
-		}
+
+	@SideOnly(Side.CLIENT)
+	private IIcon[] icons;
+
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.blockIcon = par1IconRegister.registerIcon(SkylersMod.modid + ':'
+				+ "zagarnite_ore");
+	}
 
 }
