@@ -16,6 +16,8 @@ import com.skyler.skylersmod.blocks.CustomBlackIce;
 import com.skyler.skylersmod.blocks.RubyBlock;
 import com.skyler.skylersmod.blocks.RubyOre;
 import com.skyler.skylersmod.items.CrazyArmor;
+import com.skyler.skylersmod.items.CrazyAxe;
+import com.skyler.skylersmod.items.CrazyBlade;
 import com.skyler.skylersmod.items.CrazyPick;
 import com.skyler.skylersmod.items.CrazySpade;
 import com.skyler.skylersmod.items.CrazySword;
@@ -29,6 +31,7 @@ import com.skyler.skylersmod.items.RubyIngot;
 import com.skyler.skylersmod.items.RubyPick;
 import com.skyler.skylersmod.items.RubySpade;
 import com.skyler.skylersmod.items.RubySword;
+import com.skyler.skylersmod.items.CrazyIngot;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -81,6 +84,15 @@ public class SkylersMod {
 	public static final Block rubyBlock = new RubyBlock(Material.ground);
 	public static final Item customSwordHandle = new CustomSwordHandle();
 	public static final Item rubyBlade = new RubyBlade();
+	public static final Item crazyBlade = new CrazyBlade();
+	
+	
+	
+	
+	
+	
+	
+	
 	// public static final Item rubyHelmet = new
 	// RubyHelmet(ArmorMaterial.DIAMOND,
 	// 3, 0);
@@ -97,7 +109,10 @@ public class SkylersMod {
 	public static final Item crazySword = new CrazySword(RUBY2);
 	public static final Block crazyOre = new CrazyOre(Material.ground);
 	public static final Item crazyPick = new CrazyPick(RUBY2);
-
+	public static final Item crazyAxe = new CrazyAxe(RUBY2);
+	public static final Item crazyIngot = new CrazyIngot();
+	
+	
 	@Instance(value = "SkylersMod")
 	public static SkylersMod instance;
 
@@ -125,37 +140,83 @@ public class SkylersMod {
 	public void MyRecipes() {
 		// GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond),
 		// new Object[] {Blocks.brick_stairs, Blocks.vine});
+		
+		
 		GameRegistry.addRecipe(new ItemStack(rubyAxe), new Object[] { "AA ",
 				"BA ", "B  ", 'A', rubyIngot, 'B', Items.stick });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyPick), new Object[] { "AAA",
 				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		
 		GameRegistry.addRecipe(new ItemStack(rubySpade), new Object[] { " A ",
 				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyHoe), new Object[] { "AA ",
 				" B ", " B ", 'A', rubyIngot, 'B', Items.stick });
+		
 		GameRegistry.addRecipe(new ItemStack(customSwordHandle), new Object[] {
 				"A  ", " B ", "A A", 'A', Items.stick, 'B',
 				(new ItemStack(Items.skull, 1, 1)) });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyBlade), new Object[] { " A ",
 				"CAC", " B ", 'A', rubyIngot, 'B', rubyBlock, 'C',
 				Items.diamond });
 		GameRegistry.addRecipe(new ItemStack(rubySword), new Object[] { " A ",
 				" B ", 'A', rubyBlade, 'B', customSwordHandle });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyBlock), new Object[] { "AAA",
 				"AAA", "AAA", 'A', rubyIngot });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyHelmetArmor), new Object[] {
 				"AAA", "A A", 'A', rubyIngot });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyChestPlateArmor),
 				new Object[] { "A A", "AAA", "AAA", 'A', rubyIngot });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyLeggingsArmor), new Object[] {
 				"AAA", "A A", "A A", 'A', rubyIngot });
+		
 		GameRegistry.addRecipe(new ItemStack(rubyBootsArmor), new Object[] {
 				"A A", "A A", 'A', rubyIngot });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyPick), new Object[] {
+			"A A", "A A", 'A', crazyIngot });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyBootsArmor), new Object[] {
+			"A A", "A A", 'A', crazyIngot });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyLeggingsArmor), new Object[] {
+			"AAA", "A A", "A A", 'A', crazyIngot });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyChestPlateArmor),
+				new Object[] { "A A", "AAA", "AAA", 'A', crazyIngot });
 
-		GameRegistry.addSmelting(Items.beef, new ItemStack(Items.spawn_egg, 1,
-				40), 1F);
+		GameRegistry.addRecipe(new ItemStack(crazyHelmetArmor), new Object[] {
+			"AAA", "A A", 'A', crazyIngot });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyBlock), new Object[] { "AAA",
+			"AAA", "AAA", 'A', crazyIngot });
 
+		GameRegistry.addRecipe(new ItemStack(crazySword), new Object[] { " A ",
+			" B ", 'A', crazyBlade, 'B', customSwordHandle });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyBlade), new Object[] { " A ",
+			"CAC", " B ", 'A', crazyIngot, 'B', crazyBlock, 'C', Items.diamond});
+		
+		GameRegistry.addRecipe(new ItemStack(crazySpade), new Object[] { " A ",
+			" B ", " B ", 'A', crazyIngot, 'B', Items.stick });
+		
+		GameRegistry.addRecipe(new ItemStack(crazyAxe), new Object[] { "AA ",
+			"BA ", "B  ", 'A', crazyIngot, 'B', Items.stick });
+		
+		
+		
+		
+		
+		
+		GameRegistry.addSmelting(crazyOre, new ItemStack(crazyIngot), 1000F);
 		GameRegistry.addSmelting(rubyOre, new ItemStack(rubyIngot), 1000F);
+		
 
 		ItemStack Fishis = new ItemStack(Items.stick);
 		Fishis.addEnchantment(Enchantment.knockback, 100);
@@ -179,13 +240,19 @@ public class SkylersMod {
 		GameRegistry.registerItem(crazyPick, "Crazy Pick");
 		GameRegistry.registerItem(crazySpade, "Crazy Spade");
 		GameRegistry.registerItem(crazySword, "Crazy Sword");
-
+		GameRegistry.registerItem(crazyIngot, "Crazy Ingot");
+		GameRegistry.registerItem(crazyAxe, "Crazy Axe");
+		GameRegistry.registerItem(crazyBlade, "Crazy Blade");
+		
+		
+		
 		// Crazy armor
 		GameRegistry.registerItem(crazyBootsArmor, "Crazy Boots");
 		GameRegistry.registerItem(crazyChestPlateArmor, "Crazy Chest");
 		GameRegistry.registerItem(crazyHelmetArmor, "Crazy Helmet");
 		GameRegistry.registerItem(crazyLeggingsArmor, "Crazy Legs");
 
+		
 		// Miscellaneous custom stuff
 		GameRegistry.registerItem(customSwordHandle, "Custom Sword Handle");
 		GameRegistry.registerItem(customWithersEndPick,
@@ -199,7 +266,11 @@ public class SkylersMod {
 		GameRegistry.registerItem(rubyPick, "Ruby Pick");
 		GameRegistry.registerItem(rubySpade, "Ruby Spade");
 		GameRegistry.registerItem(rubySword, "Ruby Sword");
-
+		
+		
+		
+		
+		
 		// Ruby armor
 		GameRegistry.registerItem(rubyBootsArmor, "Ruby Boots ARMOR");
 		GameRegistry
